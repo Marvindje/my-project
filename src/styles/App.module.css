@@ -1,3 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 body {
   background-image: url('../assets/whitebackground/shutterstock_1919482805.jpg');
   background-size: cover;
