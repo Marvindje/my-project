@@ -8,8 +8,12 @@ const ShopPage = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await axios.get('https://fakestoreapi.com/products');
-      setProducts(response.data);
+      try {
+        const response = await axios.get('https://fakestoreapi.com/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching products: ", error);
+      }
     };
 
     fetchProducts();
@@ -38,4 +42,3 @@ const ShopPage = () => {
 };
 
 export default ShopPage;
-
