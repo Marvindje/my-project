@@ -1,4 +1,3 @@
-// ShopPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -17,20 +16,20 @@ const ShopPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center bg-cover p-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-cover p-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
       {products.map(product => (
         <motion.div 
           key={product.id}
-          className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-white"
+          className="rounded overflow-hidden shadow-lg bg-white"
           whileHover={{ scale: 1.05 }}
         >
-          <img className="w-full h-48 object-cover" src={product.image} alt={product.title} />
+          <img className="w-full h-auto object-cover" src={product.image} alt={product.title} />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{product.title}</div>
-            <p className="text-gray-700 text-base">{product.description}</p>
+            <div className="font-bold text-2xl mb-2">{product.title}</div>
+            <p className="text-gray-800 text-lg">{product.description}</p>
           </div>
           <div className="px-6 py-4">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${product.price}</span>
+            <span className="inline-block bg-gray-300 rounded-full px-3 py-1 text-lg font-semibold text-gray-800 mr-2 mb-2">${product.price}</span>
           </div>
         </motion.div>
       ))}
