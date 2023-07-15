@@ -1,21 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/HomePage';
-import AccessoriesPage from "./pages/AccessoriesPage"
-import InfoPage from "./pages/InfoPage"
-import ShopPage from "./pages/ShopPage"
-import { Navbar } from "./components/Navbar"
+import ProductPage from './pages/ProductPage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/accessories" element={<AccessoriesPage />} />
-          <Route path="/info" element={<InfoPage />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/products/:id" element={<ProductDetailsPage />} />
         </Routes>
       </div>
     </Router>
@@ -23,4 +19,5 @@ function App() {
 }
 
 export default App;
+
 
