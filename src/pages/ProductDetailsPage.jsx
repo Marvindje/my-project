@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import SearchBar from '../components/SearchBar';
+import ProductCategories from '../components/ProductCategories';
 
 const products = [
   { id: 1, name: 'Product 1', image: 'https://via.placeholder.com/150', description: 'This is product 1.' },
@@ -14,6 +16,8 @@ const ProductDetailsPage = () => {
   return (
     <div>
       <h1>{product.name}</h1>
+      <SearchBar />
+      <ProductCategories />
       <img src={product.image} alt={product.name} />
       <p>{product.description}</p>
     </div>
@@ -21,3 +25,4 @@ const ProductDetailsPage = () => {
 };
 
 export default ProductDetailsPage;
+
