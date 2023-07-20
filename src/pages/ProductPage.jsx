@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import faker from 'faker';
 import SearchBar from '../components/SearchBar';
 import ProductCategories from '../components/ProductCategories';
 
-const products = [
-  { id: 1, name: 'Product 1', image: 'https://via.placeholder.com/150' },
-  { id: 2, name: 'Product 2', image: 'https://via.placeholder.com/150' },
-  { id: 3, name: 'Product 3', image: 'https://via.placeholder.com/150' },
-];
+const generateProducts = (count) => {
+  const products = [];
+  for (let i = 0; i < count; i++) {
+    products.push({
+      id: faker.datatype.uuid(),
+      name: faker.commerce.productName(),
+      image: 'https://via.placeholder.com/150',
+    });
+  }
+  return products;
+};
 
 const ProductPage = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(generateProducts(50)); // Génère 50 produits
+  }, []);
+
   return (
     <div>
       <h1>Our Products</h1>
@@ -27,4 +40,3 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-

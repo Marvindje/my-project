@@ -2,8 +2,8 @@ import React from 'react';
 
 const SearchBar = () => {
   return (
-    <div>
-      <input type="text" placeholder="Search products" />
+    <div className="p-6">
+      <input type="text" placeholder="Search products" className="w-full p-2 border border-gray-300 rounded" />
     </div>
   );
 };

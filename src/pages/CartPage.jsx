@@ -11,7 +11,6 @@ const CartPage = () => {
       <h1>Your Shopping Cart</h1>
       <SearchBar />
       <ProductCategories />
-      {/* Display cart items here */}
       <p>You have {cart.length} items in your cart.</p>
     </div>
   );
