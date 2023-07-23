@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { MenuIcon } from '@heroicons/react/outline';
 
 export const Navbar = () => {
@@ -15,11 +15,11 @@ export const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="flex items-center justify-between p-6 bg-gray-800 text-white w-full">
-      <h1 className="text-2xl font-bold">My closet</h1>
+    <nav className="flex items-center justify-center p-6 bg-gray-800 text-white w-full relative mt-4">
+      <h1 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>VogueWardrobe</h1>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white"
+        className="text-white absolute right-6"
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
