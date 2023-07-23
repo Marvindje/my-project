@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import faker from 'faker';
 import SearchBar from '../components/SearchBar';
 import ProductCategories from '../components/ProductCategories';
+import { Navbar } from '../components/Navbar';
 
 const generateProducts = (count) => {
   const products = [];
@@ -24,18 +25,21 @@ const ProductPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Our Products</h1>
-      <SearchBar />
-      <ProductCategories />
-      {products.map(product => (
-        <div key={product.id}>
-          <img src={product.image} alt={product.name} />
-          <h2>{product.name}</h2>
-          <Link to={`/products/${product.id}`}>View Details</Link>
-        </div>
-      ))}
-    </div>
+    <>
+      <Navbar />
+      <div className="flex flex-col items-center justify-center min-h-screen p-6">
+        
+        <SearchBar />
+        <ProductCategories />
+        {products.map(product => (
+          <div key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <h2>{product.name}</h2>
+            <Link to={`/products/${product.id}`}>View Details</Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
