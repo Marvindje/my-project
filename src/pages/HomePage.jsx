@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 import ProductCategories from '../components/ProductCategories';
+import { Navbar } from '../components/Navbar'; // Import the Navbar component
 
 const Homepage = () => {
   return (
     <div className="p-6">
+      <Navbar /> {/* Use the Navbar component */}
       <h1 className="text-3xl font-bold mb-4 text-center">My Store</h1>
       <SearchBar />
       <ProductCategories />
