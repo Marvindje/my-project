@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MenuIcon } from '@heroicons/react/outline';
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
   const location = useLocation();
 
   const handleClickOutside = (event) => {
@@ -12,49 +13,57 @@ export const Navbar = () => {
     }
   };
 
-  const isActive = (path) => location.pathname === path;
+  const handleMouseEnter = (menuName) => {
+    setActiveMenu(menuName);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveMenu(null);
+  };
+
+  const renderSubMenu = (menuName) => {
+    if (menuName === 'Hommes') {
+      return (
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-white p-2">
+          <Link to="/hommes/tshirts" className="block text-gray-800 hover:text-blue-500">T-shirts</Link>
+          <Link to="/hommes/chemises" className="block text-gray-800 hover:text-blue-500">Chemises</Link>
+        </div>
+      );
+    } else if (menuName === 'Femmes') {
+      return (
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-white p-2">
+          <Link to="/femmes/tshirts" className="block text-gray-800 hover:text-blue-500">T-shirts</Link>
+          <Link to="/femmes/chemises" className="block text-gray-800 hover:text-blue-500">Chemises</Link>
+        </div>
+      );
+    } else if (menuName === 'Accessoires') {
+      return (
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-white p-2">
+          <Link to="/accessoires/sacsamain" className="block text-gray-800 hover:text-blue-500">Sacs</Link>
+          <Link to="/accessoires/sacsados" className="block text-gray-800 hover:text-blue-500">Backpacks</Link>
+          <Link to="/accessoires/casquettes" className="block text-gray-800 hover:text-blue-500">Casquettes</Link>
+        </div>
+      );
+    }
+  };
 
   return (
-    <nav className="flex items-center justify-between p-6 bg-gray-800 text-white w-full">
-      <h1 className="text-2xl font-bold">My closet</h1>
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="text-white"
-        aria-haspopup="true"
-        aria-expanded={isOpen}
-      >
-        {isOpen ? <MenuIcon className="h-6 w-6" /> :
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
-        }
-      </button>
-      {isOpen && (
-        <div 
-          id="menu"
-          onClick={handleClickOutside}
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-200"
-        >
-          <div className="bg-white rounded p-5 w-full max-w-md mx-auto text-gray-800">
-            <div className="mb-2">
-              <h2 className={`text-gray-800 ${isActive('/hommes') ? 'font-bold' : ''}`}>Hommes</h2>
-              <Link to="/hommes/tshirts" className="block text-gray-800 hover:text-blue-500">Nos T-shirts</Link>
-              <Link to="/hommes/chemises" className="block text-gray-800 hover:text-blue-500">Nos Chemises</Link>
-            </div>
-            <div className="mb-2">
-              <h2 className={`text-gray-800 ${isActive('/femmes') ? 'font-bold' : ''}`}>Femmes</h2>
-              <Link to="/femmes/tshirts" className="block text-gray-800 hover:text-blue-500">Nos T-shirts</Link>
-              <Link to="/femmes/chemises" className="block text-gray-800 hover:text-blue-500">Nos Chemises</Link>
-            </div>
-            <div className="mb-2">
-              <h2 className={`text-gray-800 ${isActive('/accessoires') ? 'font-bold' : ''}`}>Accessoires</h2>
-              <Link to="/accessoires/sacsamain" className="block text-gray-800 hover:text-blue-500">Nos Sacs à Main</Link>
-              <Link to="/accessoires/sacsados" className="block text-gray-800 hover:text-blue-500">Nos Sacs à Dos</Link>
-              <Link to="/accessoires/casquettes" className="block text-gray-800 hover:text-blue-500">Casquettes et Bonnets</Link>
-            </div>
-          </div>
+    <nav className="flex items-center justify-center p-6 bg-gray-800 text-white w-full relative mt-4">
+      <h1 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>VogueWardrobe</h1>
+      <div className="absolute right-6 flex space-x-4">
+        <div onMouseEnter={() => handleMouseEnter('Hommes')} onMouseLeave={handleMouseLeave}>
+          <p>Hommes</p>
+          {activeMenu === 'Hommes' && renderSubMenu('Hommes')}
         </div>
-      )}
+        <div onMouseEnter={() => handleMouseEnter('Femmes')} onMouseLeave={handleMouseLeave}>
+          <p>Femmes</p>
+          {activeMenu === 'Femmes' && renderSubMenu('Femmes')}
+        </div>
+        <div onMouseEnter={() => handleMouseEnter('Accessoires')} onMouseLeave={handleMouseLeave}>
+          <p>Accessoires</p>
+          {activeMenu === 'Accessoires' && renderSubMenu('Accessoires')}
+        </div>
+      </div>
     </nav>
   );
 };
