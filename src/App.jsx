@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Homepage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
@@ -22,22 +23,24 @@ function App() {
     <CartContext.Provider value={{ cart, setCart }}>
       <FilterProvider> 
         <Router>
-          <div className="App">
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/products" element={<ShopPage />} />
-              <Route path="/products/:id" element={<ProductDetailsPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/checkout" element={<CheckoutPage />} />
-              <Route path="/hommes/tshirts" element={<MenTshirtsPage />} />
-              <Route path="/hommes/chemises" element={<MenShirtsPage />} />
-              <Route path="/femmes/tshirts" element={<WomenTshirtsPage />} />
-              <Route path="/femmes/chemises" element={<WomenShirtsPage />} />
-              <Route path="/accessoires/sacsamain" element={<AccessoriesHandbagsPage />} />
-              <Route path="/accessoires/sacsados" element={<AccessoriesBackpacksPage />} />
-              <Route path="/accessoires/casquettes" element={<AccessoriesCapsPage />} />
-            </Routes>
-          </div>
+          <ParallaxProvider>
+            <div className="App">
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/products" element={<ShopPage />} />
+                <Route path="/products/:id" element={<ProductDetailsPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/hommes/tshirts" element={<MenTshirtsPage />} />
+                <Route path="/hommes/chemises" element={<MenShirtsPage />} />
+                <Route path="/femmes/tshirts" element={<WomenTshirtsPage />} />
+                <Route path="/femmes/chemises" element={<WomenShirtsPage />} />
+                <Route path="/accessoires/sacsamain" element={<AccessoriesHandbagsPage />} />
+                <Route path="/accessoires/sacsados" element={<AccessoriesBackpacksPage />} />
+                <Route path="/accessoires/casquettes" element={<AccessoriesCapsPage />} />
+              </Routes>
+            </div>
+          </ParallaxProvider>
         </Router>
       </FilterProvider> 
     </CartContext.Provider>
