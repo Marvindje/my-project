@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { IMAGES } from '../../assets/images.js'; // Importez les données de images.js
+import articles from '../data/articles.js'; 
 
 const ProductDetailsPage = () => {
   const [currentProduct, setCurrentProduct] = useState({})
@@ -8,7 +8,7 @@ const ProductDetailsPage = () => {
   
   useEffect(() => {
     if(id){
-      const findProduct = IMAGES.find(product => product.id === id); // Utilisez les données de images.js au lieu de l'API faker
+      const findProduct = articles.find(product => product.id === id); // Utilisez les données de images.js au lieu de l'API faker
       setCurrentProduct(findProduct)
     }
   }, [id])

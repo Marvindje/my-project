@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/HomePage';
-import ProductPage from './pages/ProductPage';
+import ShopPage from './pages/ShopPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -25,7 +25,7 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/products" element={<ProductPage />} />
+              <Route path="/products" element={<ShopPage />} />
               <Route path="/products/:id" element={<ProductDetailsPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
