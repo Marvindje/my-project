@@ -3,8 +3,7 @@ import { SearchIcon } from '@heroicons/react/outline';
 import { motion } from 'framer-motion';
 
 
-const SearchBar = () => {
-  
+const SearchBar = ({ onChangeSearchValue }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => {
@@ -21,7 +20,8 @@ const SearchBar = () => {
         <input 
           type="text" 
           placeholder="Search products" 
-          className="w-full p-2" 
+          className="w-full p-2"
+          onChange={(e) => onChangeSearchValue(e.target.value)} 
           onFocus={handleFocus} 
           onBlur={handleBlur}
         />

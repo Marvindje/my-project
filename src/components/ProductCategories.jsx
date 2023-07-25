@@ -5,7 +5,7 @@ const ProductCategories = () => {
   const categories = ['Hommes', 'Femmes', 'Accessoires']; // Updated categories
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center">
       <div className="flex space-x-4 p-4 rounded shadow text-lg">
         {categories.map((category) => (
           <Link to={`/${category.toLowerCase()}`} key={category} className="font-semibold">
