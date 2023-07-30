@@ -5,7 +5,7 @@ import articles from '../data/articles.js';
 
 const ShopPage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-cover p-8 overflow-auto" style={{ height: '100vh', gridAutoRows: 'minmax(100px, auto)', justifyContent: 'center' }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-cover p-8 overflow-auto" style={{ gridAutoRows: 'auto', justifyContent: 'center' }}>
     {articles.map(article => (
       <Parallax y={[-20, 20]} key={article.id}>
         <motion.div 
@@ -29,4 +29,3 @@ const ShopPage = () => {
 };
 
 export default ShopPage;
-
