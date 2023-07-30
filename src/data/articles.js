@@ -200,6 +200,14 @@ const articles = [
         "name": "Sac à main ",
         "image": '/articles/ehimetalor-akhere-unuabona-lq19sZ5pQ-c-unsplash.jpg'
     },
+    {
+        "id": "26",
+        "price": 65.99,
+        "type": "shirts",
+        "description": "Chemises navy blue pour hommes   ",
+        "name": "Lot de 4 chemises ",
+        "image": '/articles/lasse-jensen-B1Le_4XqOS8-unsplash.jpg'
+    },
 ];
 
 export default articles ;

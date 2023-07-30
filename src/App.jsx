@@ -15,6 +15,7 @@ import AccessoriesBackpacksPage from './pages/AccessoriesBackpacksPage';
 import AccessoriesCapsPage from './pages/AccessoriesCapsPage';
 import CartContext from './CartContext';
 import { FilterProvider } from './FilterContext';
+import { Navbar } from './components/Navbar'; // Corrected import path
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -25,6 +26,7 @@ function App() {
         <Router>
           <ParallaxProvider>
             <div className="App">
+              <Navbar /> {/* Include the Navbar component here */}
               <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/products" element={<ShopPage />} />

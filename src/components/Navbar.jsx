@@ -23,7 +23,7 @@ export const Navbar = () => {
   const renderSubMenu = (menuName) => {
     if (menuName === 'Hommes') {
       return (
-        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg">
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg z-10">
           <Link to="/hommes/tshirts" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">T-shirts</Link>
           <Link to="/hommes/chemises" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Chemises</Link>
           <Link to="/hommes/sweatshirts" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Sweatshirts</Link>
@@ -31,7 +31,7 @@ export const Navbar = () => {
       );
     } else if (menuName === 'Femmes') {
       return (
-        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg">
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg z-10">
           <Link to="/femmes/tshirts" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">T-shirts</Link>
           <Link to="/femmes/chemises" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Chemises</Link>
           <Link to="/femmes/sweatshirts" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Sweatshirts</Link>
@@ -39,7 +39,7 @@ export const Navbar = () => {
       );
     } else if (menuName === 'Accessoires') {
       return (
-        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg">
+        <div className="mb-2 transition-all duration-200 ease-in-out absolute bg-gray-800 p-2 rounded shadow-lg z-10">
           <Link to="/accessoires/sacsamain" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Sacs</Link>
           <Link to="/accessoires/sacsados" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Backpacks</Link>
           <Link to="/accessoires/casquettes" className="block text-white hover:text-blue-500 transition-all duration-200 transform hover:scale-110">Casquettes</Link>
@@ -52,7 +52,7 @@ export const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-center p-6 bg-gray-800 text-white w-full relative mt-4">
-      <h1 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>VogueWardrobe</h1>
+      <h1 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>My Closet</h1>
       <div className="absolute right-6 flex space-x-4">
         <div onMouseEnter={() => handleMouseEnter('Hommes')} onMouseLeave={handleMouseLeave}>
           <p>Hommes</p>
