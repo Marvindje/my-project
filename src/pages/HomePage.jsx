@@ -13,7 +13,7 @@ const Homepage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to Our Shop
+          Bienvenue !
         </motion.h1>
         <motion.p 
           className="text-xl mb-8"
@@ -21,7 +21,7 @@ const Homepage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          Explore our collection of amazing products
+          Explore notre collection de produits 
         </motion.p>
       </div>
       <ProductCategories className="mb-8" />

@@ -6,6 +6,7 @@ const articles = [
         "description": "t-shirt blanc simple pour hommes",
         "name": "T-shirt blanc M homme ",
         "image": '/articles/anomaly-WWesmHEgXDs-unsplash.jpg'
+        
     },
     {
         "id": "2",
