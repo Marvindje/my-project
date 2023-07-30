@@ -105,7 +105,7 @@ const articles = [
     },
     {
         "id": "14",
-        "price": 155.99,
+        "price": 15.99,
         "type": "shirts",
         "description": "Lot de robes second choix femmes",
         "name": "Robes d'occasion de seconde main pour femmes",
@@ -115,9 +115,9 @@ const articles = [
         "id": "15",
         "price": 25.99,
         "type": "shirts",
-        "description": "image non fonctionnelle",
-        "name": " error",
-        "image": '/articles/sindre-aalberg-ajEo1K1U0s-unsplash.jpg'
+        "description": "pancho decolleté en filtes pour femmes ",
+        "name": "pancho en  filets ",
+        "image": '/articles/milada-vigerova-p8Drpg_duLw-unsplash.jpg'
     },
     {
         "id": "16",
@@ -129,92 +129,77 @@ const articles = [
     },
     {
         "id": "17",
-        "price": 15.99,
-        "type": "shirts",
-        "description": "Description for trinh-minh-th-ScYGyGhA9HQ-unsplash.jpg",
-        "name": "trinh-minh-th-ScYGyGhA9HQ-unsplash",
+        "price": 155.99,
+        "type": "accessories",
+        "description": "Notre collection de sacs à main pour femmes cuir ecaille",
+        "name": "Sacs cuir à écailles",
         "image": '/articles/trinh-minh-th-ScYGyGhA9HQ-unsplash.jpg'
     },
     {
         "id": "18",
         "price": 15.99,
         "type": "shirts",
-        "description": "Description for vonecia-carswell-0aMMMUjiiEQ-unsplash.jpg",
-        "name": "vonecia-carswell-0aMMMUjiiEQ-unsplash",
+        "description": "Pulls pastelles pour femmes en cuir et coton",
+        "name": "Pulls couleurs pastelles",
         "image": '/articles/vonecia-carswell-0aMMMUjiiEQ-unsplash.jpg'
     },
     {
         "id": "19",
         "price": 15.99,
         "type": "shirts",
-        "description": "Description for warion-taipei-Gb3wBsGr_mQ-unsplash.jpg",
-        "name": "warion-taipei-Gb3wBsGr_mQ-unsplash",
+        "description": "Chapeaux Panama H/F Unisize",
+        "name": "Chapeaux Panama",
         "image": '/articles/warion-taipei-Gb3wBsGr_mQ-unsplash.jpg'
     },
+
     {
         "id": "20",
-        "price": 15.99,
+        "price": 45.99,
         "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "description": "Sac à dos cuir à lanières H/F Unisize",
+        "name": "Sacs en cuir hommes / femmes",
+        "image": '/articles/sindre-aalberg-ajEo1YX-bfo-unsplash.jpg'
     },
     {
         "id": "21",
         "price": 15.99,
-        "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "type": "accessories",
+        "description": "lunettes de soleil H/F Unisize",
+        "name": "Lunettes style 3D yellow",
+        "image": '/articles/osarugue-igbinoba-TWAh-7ImVYY-unsplash.jpg'
     },
     {
         "id": "22",
         "price": 15.99,
-        "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "type": "accessories",
+        "description": "Casquette en daim bleu marine",
+        "name": "Casquette Homme ",
+        "image": '/articles/michael-dolejs-b9hqQkKCnqw-unsplash.jpg'
     },
     {
         "id": "23",
-        "price": 15.99,
-        "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "price": 155.99,
+        "type": "accessories",
+        "description": "Pendentif en or ",
+        "name": "Pendentif Or",
+        "image": '/articles/eve-maier-7uQQHORcTpc-unsplash.jpg'
     },
     {
         "id": "24",
-        "price": 15.99,
+        "price": 55.99,
         "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "description": "t-shirt blanc polyester pour hommes / femmes oversize 100% polyester ",
+        "name": "The White Tee",
+        "image": '/articles/force-majeure-00tlC0Clfrs-unsplash.jpg'
     },
     {
         "id": "25",
-        "price": 15.99,
+        "price": 55.99,
         "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
+        "description": "Sac à main pour femmes en cuir bleu clair   ",
+        "name": "Sac à main ",
+        "image": '/articles/ehimetalor-akhere-unuabona-lq19sZ5pQ-c-unsplash.jpg'
     },
-    {
-        "id": "26",
-        "price": 15.99,
-        "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
-    },
-    {
-        "id": "27",
-        "price": 15.99,
-        "type": "shirts",
-        "description": "Description for jingxi-lau-7m0Y-vhyDGE-unsplash.jpg",
-        "name": "jingxi-lau-7m0Y-vhyDGE-unsplash",
-        "image": '/articles/jingxi-lau-7m0Y-vhyDGE-unsplash.jpg'
-    }
 ];
 
 export default articles ;
