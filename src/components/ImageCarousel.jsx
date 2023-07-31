@@ -1,5 +1,3 @@
-// src/components/ImageCarousel.jsx
-
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -32,7 +30,7 @@ const ImageCarousel = () => {
     <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img src={`/articles/${image}`} alt="Product" className="w-16 h-16 rounded-lg shadow-lg" />
+         <img src={`/articles/${image}`} alt="Product" className="w-32 h-32 rounded-lg shadow-lg" />
         </div>
       ))}
     </Slider>
