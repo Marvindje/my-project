@@ -1,10 +1,9 @@
-// src/pages/HomePage.jsx
 
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ProductCategories from '../components/ProductCategories';
-import ImageCarousel from '../components/ImageCarousel'; // Import ImageCarousel
+import ImageCarousel from '../components/ImageCarousel'; 
 
 const Homepage = () => {
   return (
@@ -30,7 +29,7 @@ const Homepage = () => {
       <ProductCategories className="mb-8" />
       <Link to="/products" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Shop Now</Link>
       <Link to="/about" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Learn More</Link>
-      <ImageCarousel /> {/* Use ImageCarousel here */}
+      <ImageCarousel /> 
     </div>
   );
 };
