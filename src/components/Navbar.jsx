@@ -52,7 +52,9 @@ export const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-center p-6 bg-gray-800 text-white w-full relative mt-4">
+      <Link to="/">
       <h1 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>The Closet</h1>
+      </Link>
       <div className="absolute right-6 flex space-x-4">
         <div onMouseEnter={() => handleMouseEnter('Hommes')} onMouseLeave={handleMouseLeave}>
           <p>Hommes</p>
