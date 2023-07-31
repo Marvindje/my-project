@@ -26,6 +26,7 @@ const Homepage = () => {
       </div>
       <ProductCategories className="mb-8" />
       <Link to="/products" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Shop Now</Link>
+      <Link to="/about" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Learn More</Link>
     </div>
   );
 };

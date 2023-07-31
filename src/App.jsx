@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Homepage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import ShopPage from './pages/ShopPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import CartPage from './pages/CartPage';
@@ -29,6 +30,7 @@ function App() {
               <Navbar /> {/* Include the Navbar component here */}
               <Routes>
                 <Route path="/" element={<Homepage />} />
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/products" element={<ShopPage />} />
                 <Route path="/products/:id" element={<ProductDetailsPage />} />
                 <Route path="/cart" element={<CartPage />} />

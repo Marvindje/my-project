@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCategories = () => {
-  const categories = ['Hommes', 'Femmes', 'Accessoires']; // Updated categories
+  const categories = []; // Updated categories
 
   return (
     <div className="flex justify-center items-center">
