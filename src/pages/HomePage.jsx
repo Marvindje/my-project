@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -7,7 +6,7 @@ import ImageCarousel from '../components/ImageCarousel';
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6" style={{ background: 'linear-gradient(to right, #f3e7e9, #e3eeff)' }}>
       <div className="text-center text-gray-800">
         <motion.h1 
           className="text-6xl font-bold mb-4"
