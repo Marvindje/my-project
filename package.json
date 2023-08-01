@@ -14,6 +14,8 @@
     "@heroicons/react": "^1.0.6",
     "@motionone/utils": "^10.15.1",
     "axios": "^1.4.0",
+    "embla-carousel": "^8.0.0-rc11",
+    "embla-carousel-react": "^8.0.0-rc11",
     "faker": "^5.5.3",
     "framer-motion": "^10.13.0",
     "react": "^18.2.0",
@@ -21,9 +23,7 @@
     "react-medium-image-zoom": "^5.1.7",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.14.1",
-    "react-scroll-parallax": "^3.4.2",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "react-scroll-parallax": "^3.4.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

@@ -7,6 +7,7 @@ import ImageCarousel from '../components/ImageCarousel';
 const Homepage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6" style={{ background: 'linear-gradient(to right, #f3e7e9, #e3eeff)' }}>
+      <ImageCarousel />
       <div className="text-center text-gray-800">
         <motion.h1 
           className="text-6xl font-bold mb-4"
@@ -28,7 +29,6 @@ const Homepage = () => {
       <ProductCategories className="mb-8" />
       <Link to="/products" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Shop Now</Link>
       <Link to="/about" className="inline-block mt-4 bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-xl hover:bg-gray-700 hover:text-white transition-colors duration-300">Learn More</Link>
-      <ImageCarousel /> 
     </div>
   );
 };

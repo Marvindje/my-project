@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutPage = () => {
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the form from being submitted
-    window.alert('Ton message a bien été envoyé, merci pour ton retour.'); // Show the alert
+    event.preventDefault(); 
+    window.alert('Ton message a bien été envoyé, merci pour ton retour.'); 
   };
 
   return (

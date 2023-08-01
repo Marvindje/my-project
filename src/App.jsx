@@ -16,7 +16,7 @@ import AccessoriesBackpacksPage from './pages/AccessoriesBackpacksPage';
 import AccessoriesCapsPage from './pages/AccessoriesCapsPage';
 import CartContext from './CartContext';
 import { FilterProvider } from './FilterContext';
-import { Navbar } from './components/Navbar'; // Corrected import path
+import { Navbar } from './components/Navbar'; 
 
 function App() {
   const [cart, setCart] = useState([]);
