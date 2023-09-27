@@ -1,4 +1,4 @@
-const { ProductModel } = require('../models/product.model');
+const { ProductModel } = require("../models/Product.model");
 
 class ProductController {
   // Obtenir tous les produits
@@ -17,7 +17,7 @@ class ProductController {
     try {
       const product = await ProductModel.findByPk(req.params.id);
       if (!product) {
-        return res.status(404).send({ error: 'Product not found' });
+        return res.status(404).send({ error: "Product not found" });
       }
       return res.status(200).send(product);
     } catch (err) {
@@ -44,7 +44,7 @@ class ProductController {
       const { name, price } = req.body;
       const product = await ProductModel.findByPk(req.params.id);
       if (!product) {
-        return res.status(404).send({ error: 'Product not found' });
+        return res.status(404).send({ error: "Product not found" });
       }
       product.name = name;
       product.price = price;
@@ -61,10 +61,10 @@ class ProductController {
     try {
       const product = await ProductModel.findByPk(req.params.id);
       if (!product) {
-        return res.status(404).send({ error: 'Product not found' });
+        return res.status(404).send({ error: "Product not found" });
       }
       await product.destroy();
-      return res.status(200).send({ message: 'Product deleted successfully' });
+      return res.status(200).send({ message: "Product deleted successfully" });
     } catch (err) {
       console.error(err);
       return res.status(500).send({ error: err.message });

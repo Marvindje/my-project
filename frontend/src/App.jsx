@@ -27,22 +27,8 @@ function App() {
         <Router>
           <ParallaxProvider>
             <div className="App">
-              <Navbar /> {/* Include the Navbar component here */}
-              <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/products" element={<ShopPage />} />
-                <Route path="/products/:id" element={<ProductDetailsPage />} />
-                <Route path="/cart" element={<CartPage />} />
-                <Route path="/checkout" element={<CheckoutPage />} />
-                <Route path="/hommes/tshirts" element={<MenTshirtsPage />} />
-                <Route path="/hommes/chemises" element={<MenShirtsPage />} />
-                <Route path="/femmes/tshirts" element={<WomenTshirtsPage />} />
-                <Route path="/femmes/chemises" element={<WomenShirtsPage />} />
-                <Route path="/accessoires/sacsamain" element={<AccessoriesHandbagsPage />} />
-                <Route path="/accessoires/sacsados" element={<AccessoriesBackpacksPage />} />
-                <Route path="/accessoires/casquettes" element={<AccessoriesCapsPage />} />
-              </Routes>
+              <Navbar />
+              <AppRoutes />
             </div>
           </ParallaxProvider>
         </Router>
@@ -51,4 +37,5 @@ function App() {
   );
 }
 
-export default App;
+
+ex

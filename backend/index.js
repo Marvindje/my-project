@@ -1,19 +1,17 @@
-// Importez vos modèles
-require("./UserModel");
-require("./ProductModel");
-require("./OrderModel");
+// modèles
+require("./src/models/Product.model");
+require("./src/models/Order.model"); // Corrigé ici
+require("./src/models/User.model"); // Corrigé ici
 
-// Importez votre instance Sequelize
-const { sequelize } = require("../../config/database");
+const { sequelize } = require("./config/db");
 
 // Synchronisez vos modèles avec la base de données
 sequelize
-  .sync({ force: true })  // Utilisez { force: true } uniquement en développement !
+  .sync({ force: true })
   .then(() => {
-    // Log en cas de succès
+    // Log
     console.info("Tables created successfully!");
   })
   .catch((error) => {
-    // Log en cas d'erreur
     console.warn("Unable to create tables:", error);
   });
